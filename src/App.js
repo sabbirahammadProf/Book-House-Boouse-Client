@@ -10,10 +10,11 @@ import ManageOrders from './components/ManageOrders/ManageOrders';
 import AddService from './components/AddService/AddService';
 import NotFound from './components/NotFound/NotFound';
 import BookRoom from './components/BookRoom/BookRoom';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
-    <>
+    <AuthProvider>
      <Router>
        <Header></Header>
        <Switch>
@@ -49,7 +50,7 @@ function App() {
        </Switch>
        <Footer></Footer>
      </Router>
-    </>
+    </AuthProvider>
   );
 }
 

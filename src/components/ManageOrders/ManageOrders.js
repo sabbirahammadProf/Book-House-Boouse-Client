@@ -5,7 +5,7 @@ const ManageOrders = () => {
         <div className="w-11/12 mx-auto">
             <h2 className="text-3xl pt-12 font-bold text-center">Manage All Users</h2>
             <div className="mt-10 mb-12 flex flex-col items-center">
-            <table class="table-auto border-collapse block overflow-auto">
+            <table className="table-auto border-collapse block overflow-auto">
             <thead>
                 <tr>
                     <th className="border border-2 border-red-600 py-1 px-3">User ID</th>
@@ -15,6 +15,7 @@ const ManageOrders = () => {
                     <th className="border border-2 border-red-600 py-1 px-3">Paid By</th>
                     <th className="border border-2 border-red-600 py-1 px-3">Processing</th>
                     <th className="border border-2 border-red-600 py-1 px-3">Activity</th>
+                    <th className="border border-2 border-red-600 py-1 px-3">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,16 +26,8 @@ const ManageOrders = () => {
                     <td className="border border-2 border-red-600 py-1 px-3">01/05/2021</td>
                     <td className="border border-2 border-red-600 py-1 px-3">Bkash</td>
                     <td className="border border-2 border-red-600 py-1 px-3">pending</td>
-                    <td className="border border-2 border-red-600 py-1 px-3"><button className="bg-green-500 text-white rounded py-1 px-2">Approve</button></td>
-                </tr>
-                <tr>
-                    <td className="border border-2 border-red-600 py-1 px-3">h74hfju4jejjdju4hihr3hrhjh</td>
-                    <td className="border border-2 border-red-600 py-1 px-3">Room with AC in London</td>
-                    <td className="border border-2 border-red-600 py-1 px-3">me.rahim@gmail.com</td>
-                    <td className="border border-2 border-red-600 py-1 px-3">31/7/2021</td>
-                    <td className="border border-2 border-red-600 py-1 px-3">Paypal</td>
-                    <td className="border border-2 border-red-600 py-1 px-3">Approve</td>
-                    <td className="border border-2 border-red-600 py-1 px-3"><button className="bg-red-500 text-white rounded py-1 px-2">Unapprove</button></td>
+                    <td className="border border-2 border-red-600 py-1 px-3 text-center"><button className="bg-green-500 text-white rounded py-1 px-2">Approve</button></td>
+                    <td className="border border-2 border-red-600 py-1 px-3 text-center"><i className="fas fa-trash bg-red-600 text-white p-3 rounded cursor-pointer"></i></td>
                 </tr>
             </tbody>
             </table>

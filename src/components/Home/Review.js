@@ -19,11 +19,11 @@ const Review = () => {
                     <h3 className="text-2xl font-bold pt-3">Selina Akter</h3>
                     <p className="text-sm">Tourist of Sri Lanka</p>
                     <div className="mt-4">
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
                     </div>
                     <p className="mt-4">This experience is very good. I have everything what I want. Thanks to Boouse for that.</p>
                 </div>
@@ -32,11 +32,11 @@ const Review = () => {
                     <h3 className="text-2xl font-bold pt-3">Atik Mia</h3>
                     <p className="text-sm">Tourist of London</p>
                     <div className="mt-4">
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
                     </div>
                     <p className="mt-4">This experience is very good. I have everything what I want. Thanks to Boouse for that.</p>
                 </div>
@@ -45,11 +45,11 @@ const Review = () => {
                     <h3 className="text-2xl font-bold pt-3">Shoaib Akter</h3>
                     <p className="text-sm">Tourist of Abu Dhabi</p>
                     <div className="mt-4">
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
-                        <i class="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
+                        <i className="fas fa-star inline-block text-yellow-400"></i>
                     </div>
                     <p className="mt-4">This experience is very good. I have everything what I want. Thanks to Boouse for that.</p>
                 </div>
