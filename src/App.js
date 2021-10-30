@@ -7,6 +7,9 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageOrders from './components/ManageOrders/ManageOrders';
+import AddService from './components/AddService/AddService';
+import NotFound from './components/NotFound/NotFound';
+import BookRoom from './components/BookRoom/BookRoom';
 
 function App() {
   return (
@@ -32,6 +35,15 @@ function App() {
          </Route>
          <Route path="/manageorders">
           <ManageOrders></ManageOrders>
+         </Route>
+         <Route path="/addnewservice">
+          <AddService></AddService>
+         </Route>
+         <Route path="/bookroom/:id">
+          <BookRoom></BookRoom>
+         </Route>
+         <Route path="*">
+          <NotFound></NotFound>
          </Route>
 
        </Switch>
