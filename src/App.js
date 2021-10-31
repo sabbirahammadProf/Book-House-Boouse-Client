@@ -11,6 +11,8 @@ import AddService from './components/AddService/AddService';
 import NotFound from './components/NotFound/NotFound';
 import BookRoom from './components/BookRoom/BookRoom';
 import AuthProvider from './context/AuthProvider';
+import LoggedOutPrivetRoute from './components/PrivetRouts/LoggedOutPrivetRoute';
+import LoggedInPrivetRoute from './components/PrivetRouts/LoggedInPrivetRoute';
 
 function App() {
   return (
@@ -25,24 +27,24 @@ function App() {
          <Route path="/home">
           <Home></Home>
          </Route>
-         <Route path="/login">
+         <LoggedInPrivetRoute path="/login">
           <Login></Login>
-         </Route>
-         <Route path="/signup">
+         </LoggedInPrivetRoute>
+         <LoggedInPrivetRoute path="/signup">
           <Signup></Signup>
-         </Route>
-         <Route path="/myorders">
+         </LoggedInPrivetRoute>
+         <LoggedOutPrivetRoute path="/myorders">
           <MyOrders></MyOrders>
-         </Route>
-         <Route path="/manageorders">
+         </LoggedOutPrivetRoute>
+         <LoggedOutPrivetRoute path="/manageorders">
           <ManageOrders></ManageOrders>
-         </Route>
-         <Route path="/addnewservice">
+         </LoggedOutPrivetRoute>
+         <LoggedOutPrivetRoute path="/addnewservice">
           <AddService></AddService>
-         </Route>
-         <Route path="/bookroom/:id">
+         </LoggedOutPrivetRoute>
+         <LoggedOutPrivetRoute path="/bookroom/:id">
           <BookRoom></BookRoom>
-         </Route>
+         </LoggedOutPrivetRoute>
          <Route path="*">
           <NotFound></NotFound>
          </Route>

@@ -1,16 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory, useLocation} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Signup = () => {
     const {signInUserBygoogle, setUser, setError, setLoading} = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+    const url = location?.from ? location?.from?.pathname : '/myorders';
     const signUpUser = () => {
         signInUserBygoogle()
-        .then(result => setUser(result.user))
+        .then(result => {
+            setUser(result.user);
+            history.push(url);
+        })
         .catch(error => setError(error.message))
-        .finally(() => setLoading(true));
+        .finally(() => setLoading(false));
     }
     return (
+        // Create an account
         <div className="w-11/12 mx-auto flex flex-col items-center py-12">
             <h2 className="text-3xl font-bold text-center py-4">Create a new account</h2>
             <button className="border-0 shadow-2xl px-16 py-2 rounded-full mx-auto flex justify-center items-center text-white mt-6 bg-blue-400" onClick={signUpUser}><i className="fab fa-google text-2xl pr-6 text-white"></i> Continue with Google</button>
