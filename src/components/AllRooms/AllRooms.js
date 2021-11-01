@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Rooms = () => {
+const AllRooms = () => {
     const [rooms, setRooms] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -9,12 +9,13 @@ const Rooms = () => {
         fetch('http://localhost:5000/rooms')
         .then(res => res.json())
         .then(data => {
-            setRooms(data.slice(0, 6));
+            setRooms(data);
             setIsLoading(false);
         });
     }, []);
+
     return (
-        <section className="w-11/12 mx-auto">
+        <section className="w-11/12 mx-auto py-16">
             <h2 className="text-3xl font-bold">Our available rooms</h2>
             <p className="pt-3 mb-8">Find a perfect room for you which is available</p>
             {/* Loader start */}
@@ -72,8 +73,10 @@ const Rooms = () => {
                 }
             </div>
             {/* Show rooms end */}
+            {/* Show rooms end */}
         </section>
+        
     );
 };
 
-export default Rooms;
+export default AllRooms;

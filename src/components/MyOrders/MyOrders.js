@@ -1,15 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import roomA from '../../images/room2.jpg';
 import useAuth from '../../hooks/useAuth';
 
 const MyOrders = () => {
     const [isLoading, setIsLoading] = useState(true);
     const {user} = useAuth();
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/booking')
-    //     .then(res => res.json())
-    //     .then(data => console.log(data.filter((item) => item.booked_email === "a")))
-    // }, []);
+    const [currentUser, setCurrentUser] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/books')
+        .then(res => res.json())
+        .then(data => {
+            setCurrentUser(data.filter((item) => item.email == user.email));
+            setIsLoading(false);
+        });
+    }, []);
+
+    const handleDelete = (id) => {
+        const confirmation = window.confirm("Are you want to delete this item?")
+            if (confirmation) {
+                fetch(`http://localhost:5000/books/${id}`, {method: 'DELETE'})
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    const newBookings = currentUser.filter((booking) => booking._id != id);
+                    setCurrentUser(newBookings)
+                }
+            })
+        }
+    }
+
     return (
     <>
     {/* Loading start */}
@@ -41,13 +59,15 @@ const MyOrders = () => {
     <div className={isLoading ? "w-11/12 mx-auto py-12 hidden" : "w-11/12 mx-auto py-12 visible"}>
             <h2 className="text-3xl font-bold text-center mb-6">What is booked by you</h2>
             <div className="grid grid-cols-3 gap-8 rounded">
-                <div className="rounded shadow-2xl px-4 py-6">
-                    <img src={roomA} alt="" className="w-full"/>
-                    <h2 className="text-2xl font-bold pt-3 pb-2">Best room for non AC lover</h2>
-                    <p>Proccessing: <span className="text-red-500 font-bold">pending</span></p>
-                    <h3 className="text-xl font-bold pt-3">Per Day Cost: $49</h3>
-                    <button className="primary-button mt-6">Cancel</button>
-                </div>
+                {
+                    currentUser.map((user) => <div key={user._id} className="rounded shadow-2xl px-4 py-6">
+                    <img src={user.image} alt="" className="w-full"/>
+                    <h2 className="text-2xl font-bold pt-3 pb-2">{user.booked}</h2>
+                    <p>Proccessing: <span className="text-red-500 font-bold">{user.pending == "pending" ? <><span className="text-red-500">pending</span></> : <><span className="text-green-600">approved</span></>}</span></p>
+                    <h3 className="text-xl font-bold pt-3">Per Day Cost: ${user.cost}</h3>
+                    <button className="primary-button mt-6" onClick={() => handleDelete(user._id)}>Cancel</button>
+                </div>)
+                }
             </div>
     </div>
         </>

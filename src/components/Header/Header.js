@@ -14,6 +14,7 @@ const Header = () => {
                     <div>
                         <ul>
                             <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+                            <li className="nav-item"><Link to="/allrooms" className="nav-link">All rooms</Link></li>
                             {user?.email ? <><li className="nav-item"><Link to="/myorders" className="nav-link">My Orders</Link></li>
                             <li className="nav-item"><Link to="/manageorders" className="nav-link">Manage orders</Link></li>
                             <li className="nav-item"><Link to="/addnewservice" className="nav-link">Add new service</Link></li>

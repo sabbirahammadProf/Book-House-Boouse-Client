@@ -13,6 +13,7 @@ import BookRoom from './components/BookRoom/BookRoom';
 import AuthProvider from './context/AuthProvider';
 import LoggedOutPrivetRoute from './components/PrivetRouts/LoggedOutPrivetRoute';
 import LoggedInPrivetRoute from './components/PrivetRouts/LoggedInPrivetRoute';
+import AllRooms from './components/AllRooms/AllRooms';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
          <LoggedOutPrivetRoute path="/bookroom/:id">
           <BookRoom></BookRoom>
          </LoggedOutPrivetRoute>
+         <Route path="/allrooms">
+          <AllRooms></AllRooms>
+         </Route>
          <Route path="*">
           <NotFound></NotFound>
          </Route>
