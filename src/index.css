@@ -13,11 +13,6 @@ body {
     background-color: rgba(255, 255, 255, 0.700)
 }
 
-/* Navigation style */
-.nav-item {
-    @apply inline-block;
-}
-
 .nav-link {
     @apply px-3 text-white transition-all duration-300;
 }
@@ -41,5 +36,5 @@ body {
 
 /* Form input */
 .form-input {
-    @apply outline-none bg-gray-100 py-4 px-3 my-2 rounded
+    @apply outline-none bg-gray-100 py-4 px-3 my-2 rounded w-full;
 }

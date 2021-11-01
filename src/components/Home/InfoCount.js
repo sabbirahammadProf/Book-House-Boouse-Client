@@ -3,7 +3,7 @@ import React from 'react';
 const CustomerCount = () => {
     return (
         <section className="my-28">
-            <div className="grid grid-cols-4 gap-8 w-11/12 mx-auto">
+            <div className="grid xl:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-8 w-11/12 mx-auto">
                 <div className="flex flex-col text-center">
                     <h3 className="text-5xl pb-3 font-bold">10298+</h3>
                     <p>Total client</p>

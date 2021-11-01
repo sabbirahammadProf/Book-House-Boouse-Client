@@ -5,7 +5,7 @@ const Review = () => {
         <section className="w-11/12 mx-auto mt-28 mb-24">
             <h2 className="text-3xl font-bold">What client's says about us</h2>
             <p className="pt-3 mb-8">Why we popular? Hear from them</p>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
                 <div className="shadow-2xl pt-8 pb-12 px-5 rounded text-center">
                     <img src="https://i.ibb.co/dWcMY0p/download.jpg" alt="" className="w-20 h-20 rounded-full mx-auto my-3 rounded-full"/>
                     <h3 className="text-2xl font-bold pt-3">Selina Akter</h3>
