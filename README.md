@@ -8,4 +8,4 @@
 4. Support agent in every country
 5. 100% best rooms and hotels book
 
-Boouse live link [Boouse](https://boouse-2b1e0.firebaseapp.com/)
+Boouse live link [Boouse](https://boouse-2b1e0.web.app/)
