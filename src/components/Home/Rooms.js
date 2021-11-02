@@ -18,7 +18,7 @@ const Rooms = () => {
             <h2 className="text-3xl font-bold">Our available rooms</h2>
             <p className="pt-3 mb-8">Find a perfect room for you which is available</p>
             {/* Loader start */}
-            <div className={isLoading ? "grid grid-cols-3 gap-8 visible" : "hidden"}>
+            <div className={isLoading ? "grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 visible" : "hidden"}>
                 <div className="border-2 border-gray-200 rounded px-3 py-4">
                     <div className="animate-pulse bg-gray-300 h-60 w-full"></div>
                     <div className="animate-pulse bg-gray-300 h-10 w-2/3 mt-3"></div>

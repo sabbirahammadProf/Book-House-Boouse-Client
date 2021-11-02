@@ -20,7 +20,7 @@ const ManageOrders = () => {
 
     const setBookingPending = (id, pending) => {
         setLoading(true);
-        fetch(`https://hidden-anchorage-13253.herokuapp.com//${id}/${pending}`, {
+        fetch(`https://hidden-anchorage-13253.herokuapp.com/books/${id}/${pending}`, {
             method: "PUT"
         })
             .then(res => res.json())
@@ -39,7 +39,7 @@ const ManageOrders = () => {
                 .then(data => {
                     if (data.acknowledged) {
                         const newBookings = books.filter((booking) => booking._id != id);
-                        setBooks(newBookings)
+                        setBooks(newBookings);
                     }
                 })
         }
